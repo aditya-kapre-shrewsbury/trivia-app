@@ -1,7 +1,29 @@
-import React from 'react'
+import { useState } from 'react';
 import './Home.css'
 
 const Home = () => {
+    const [isQuizStarted, setIsQuizStarted] = useState(false);
+    
+    function handleStartingQuiz() {
+        setIsQuizStarted(true)
+    }
+
+    let view
+    if(!isQuizStarted) {
+        view = <LandingPage buttonClick={handleStartingQuiz}/>;
+    } else {
+        view = <div>Quiz is started <b>{isQuizStarted.toString()}</b></div>
+    }
+
+    return (
+        <div>
+            {view}
+        </div>
+    )
+    
+}
+
+function LandingPage(props) {
     return (
         <div className="intro-page">
             <div className="blob-top">
@@ -10,7 +32,7 @@ const Home = () => {
             <header className="quizzical-title">
                 <span className="quizzical-txt">Quizzical</span>
                 <span className="quizzical-desc">Some description if needed</span>
-                <button className="btn-start-quiz">
+                <button className="btn-start-quiz" onClick={props.buttonClick}>
                     Start quiz
                 </button>
             </header>
