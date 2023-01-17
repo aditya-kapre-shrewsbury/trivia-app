@@ -1,0 +1,106 @@
+.quizzical-title {
+    position: absolute;
+    width: 412px;
+    height: 41px;
+}
+
+.intro-page {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    left: 95px;
+    background: #F5F7FB;
+}
+
+.quizzical-txt {
+    position: absolute;
+    width: 412px;
+    height: 41px;
+    left: 70px;
+    top: 218px;
+
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31.25px;
+    line-height: 37px;
+    text-align: center;
+
+    color: #293264;
+}
+
+.quizzical-desc {
+    position: absolute;
+    width: 318px;
+    height: 19px;
+    left: 117px;
+    top: 266px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #293264;
+}
+
+.btn-start-quiz {
+    position: absolute;
+    width: 193px;
+    height: 52px;
+    left: 179px;
+    top: 314px;
+
+    background: #4D5B9E;
+    border-radius: 15px;
+
+    color: #F5F7FB;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.blob-top {
+    position: absolute;
+    width: 297px;
+    height: 235px;
+    left: 540.85px;
+    top: 196.73px;
+
+    transform: rotate(-128.49deg);
+}
+
+.blob-top-5 {
+    position: absolute;
+    left: 62.24%;
+    right: -314.24%;
+    top: 161.16%;
+    bottom: -161.16%;
+
+    /* Lemony - medium */
+
+    background: #FFFAD1;
+    transform: rotate(-128.49deg);
+}
+
+.blob-bottom {
+    position: absolute;
+    width: 297px;
+    height: 235px;
+    left: -149px;
+    top: 432px;
+}
+
+.blob-bottom-5 {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: #DEEBF8;
+}
