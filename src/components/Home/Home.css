@@ -67,7 +67,7 @@
 
 .blob-top {
     position: absolute;
-    width: 297px;
+    width: 85px;
     height: 235px;
     left: 540.85px;
     top: 196.73px;
@@ -78,12 +78,9 @@
 .blob-top-5 {
     position: absolute;
     left: 62.24%;
-    right: -314.24%;
+    right: -800%;
     top: 161.16%;
     bottom: -161.16%;
-
-    /* Lemony - medium */
-
     background: #FFFAD1;
     transform: rotate(-128.49deg);
 }
@@ -91,7 +88,7 @@
 .blob-bottom {
     position: absolute;
     width: 297px;
-    height: 235px;
+    height: 160px;
     left: -149px;
     top: 432px;
 }
