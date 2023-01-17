@@ -10,7 +10,7 @@ const Home = () => {
 
     let view
     if(!isQuizStarted) {
-        view = <LandingPage buttonClick={handleStartingQuiz}/>;
+        view = <LandingPage startQuiz={handleStartingQuiz}/>;
     } else {
         view = <div>Quiz is started <b>{isQuizStarted.toString()}</b></div>
     }
@@ -32,7 +32,7 @@ function LandingPage(props) {
             <header className="quizzical-title">
                 <span className="quizzical-txt">Quizzical</span>
                 <span className="quizzical-desc">Some description if needed</span>
-                <button className="btn-start-quiz" onClick={props.buttonClick}>
+                <button className="btn-start-quiz" onClick={props.startQuiz}>
                     Start quiz
                 </button>
             </header>
