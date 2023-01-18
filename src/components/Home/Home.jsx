@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import './Home.css'
-import LandingPage from '../LandingPage/LandingPage';
+import LandingPage from '../LandingPage/LandingPage'
+import QuizPage from '../QuizPage/QuizPage'
 
 const Home = () => {
-    const [isQuizStarted, setIsQuizStarted] = useState(false);
+    const [isQuizStarted, setIsQuizStarted] = useState(false)
     
     function handleStartingQuiz() {
         setIsQuizStarted(true)
@@ -11,9 +12,9 @@ const Home = () => {
 
     let view
     if(!isQuizStarted) {
-        view = <LandingPage startQuiz={handleStartingQuiz}/>;
+        view = <LandingPage startQuiz={handleStartingQuiz}/>
     } else {
-        view = <div>Quiz is started <b>{isQuizStarted.toString()}</b></div>
+        view = <QuizPage />
     }
 
     return (
