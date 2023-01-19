@@ -23,7 +23,7 @@ const QuizPage = () => {
         <div>
             {
                 questions.map(question =>
-                    <p key={question.key}>{ question.question }</p>
+                    <p key={question.id}>{ question.question }</p>
                 )
             }
         </div>
