@@ -14,6 +14,7 @@ const Home = () => {
     if(!isQuizStarted) {
         view = <LandingPage startQuiz={handleStartingQuiz}/>
     } else {
+        console.log("Rendering Quizpage")
         view = <QuizPage />
     }
 

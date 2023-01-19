@@ -22,7 +22,9 @@ const QuizPage = () => {
     return (
         <div>
             {
-                JSON.stringify(parseQuestions(), null, 2)
+                questions.map(question =>
+                    <p key={question.key}>{ question.question }</p>
+                )
             }
         </div>
     )
