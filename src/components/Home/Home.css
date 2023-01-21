@@ -96,8 +96,6 @@
 }
 
 .question-text {
-    width: 307px;
-    height: 19px;
     left: 10px;
     top: 40px;
     font-family: 'Karla';
@@ -109,16 +107,33 @@
 }
 
 .question-txt-2 {
-    width: 307px;
     height: 19px;
     left: 10px;
     top: 40px;
 }
 
 .question-txt-1 {
-    width: 307px;
-    height: 51.63px;
+    width: 500px;
+    height: 90px;
     left: 10px;
     top: 40px;
-    border: 0.79px solid #4D5B9E
+    border-bottom: 0.79px solid #4D5B9E;
+    text-align: center;
+    margin: auto
+}
+
+.rectangle {
+    width: 105px;
+    background: #D6DBF5;
+    border-radius: 7.94239px;
+    display: inline-block;
+    margin-left: 20px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+
+    color: #293264;
 }

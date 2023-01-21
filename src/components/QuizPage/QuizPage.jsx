@@ -7,7 +7,7 @@ const QuizPage = () => {
     useEffect(() => {
         console.log('About to make API call to trivia')
         async function getTriviaQuestionsAndAnswers() {
-            const res = await fetch("https://the-trivia-api.com/api/questions?limit=4")
+            const res = await fetch("https://the-trivia-api.com/api/questions?limit=5")
             const data = await res.json()
             setQuestions(data)
         }
@@ -28,6 +28,20 @@ const QuizPage = () => {
                             <p className="question-text" key={question.id}>
                                 {question.question}
                             </p>
+                            <div>
+                                <div className="rectangle">
+                                    {question.correctAnswer}
+                                </div>
+                                <div className="rectangle">
+                                    {question.incorrectAnswers[0]}
+                                </div>
+                                <div className="rectangle">
+                                    {question.incorrectAnswers[1]}
+                                </div>
+                                <div className="rectangle">
+                                    {question.incorrectAnswers[2]}
+                                </div>
+                            </div>
                         </header>
                     </div>
                 )
