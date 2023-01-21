@@ -8,7 +8,13 @@ const QuizPage = () => {
         console.log('About to make API call to trivia')
         async function getTriviaQuestionsAndAnswers() {
             const res = await fetch("https://the-trivia-api.com/api/questions?limit=5")
-            const data = await res.json()
+            let data = await res.json()
+            data = data.map(datum => (
+                {
+                    ...datum,
+                    answers: [datum.incorrectAnswers, datum.correctAnswer].flat().sort()
+                })
+            )
             setQuestions(data)
         }
         getTriviaQuestionsAndAnswers()
@@ -22,28 +28,29 @@ const QuizPage = () => {
     return (
         <div className="intro-page">
             {
-                questions.map(question =>
-                    <div className="question-txt-1">
-                        <header className="question-txt-2" >
-                            <p className="question-text" key={question.id}>
-                                {question.question}
-                            </p>
-                            <div>
-                                <div className="rectangle">
-                                    {question.correctAnswer}
+                questions.map(question => 
+                        < div className = "question-txt-1" >
+                            <header className="question-txt-2" >
+                                <p className="question-text" key={question.id}>
+                                    {question.question}
+                                </p>
+                                <div>
+                                    <div className="rectangle">
+                                        {question.answers[0]}
+                                    </div>
+                                    <div className="rectangle">
+                                        {question.answers[1]}
+                                    </div>
+                                    <div className="rectangle">
+                                        {question.answers[2]}
+                                    </div>
+                                    <div className="rectangle">
+                                        {question.answers[3]}
+                                    </div>
                                 </div>
-                                <div className="rectangle">
-                                    {question.incorrectAnswers[0]}
-                                </div>
-                                <div className="rectangle">
-                                    {question.incorrectAnswers[1]}
-                                </div>
-                                <div className="rectangle">
-                                    {question.incorrectAnswers[2]}
-                                </div>
-                            </div>
-                        </header>
+                            </header>
                     </div>
+                    
                 )
             }
         </div>
