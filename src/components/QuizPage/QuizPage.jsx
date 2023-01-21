@@ -16,6 +16,7 @@ const QuizPage = () => {
                 })
             )
             setQuestions(data)
+            console.log(`received and formatted data: ${JSON.stringify(data)}`)
         }
         getTriviaQuestionsAndAnswers()
     }, [])
