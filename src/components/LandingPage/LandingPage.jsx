@@ -1,3 +1,5 @@
+import React from 'react';
+
 const LandingPage = (props) => {
     return (
         <div className="intro-page">
